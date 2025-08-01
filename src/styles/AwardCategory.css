@@ -1,0 +1,217 @@
+/* AwardCategory_admin.css */
+.award-category-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.award-category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  
+}
+
+.award-category-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1a3c6e;
+}
+
+.award-actions {
+  display: flex;
+  gap: 8px;
+}
+
+..action-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.action-btn:hover {
+  transform: scale(1.2);
+  background-color: rgba(45, 67, 115, 0.1);
+}
+
+.action-btn.add {
+  color: #2a9d8f;
+}
+
+.action-btn.edit {
+  color: #f4a261;
+}
+
+.action-btn.delete {
+  color: #e63946;
+}
+.award-list {
+  list-style: none;
+  padding: 0;
+}
+
+.award-item {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.award-item.active {
+  background-color: #f9fafb;
+}
+
+.award-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.award-name:hover {
+  color: #2563eb;
+}
+
+.sub-categories {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 8px;
+  display: none;
+}
+
+.award-item.active .sub-categories {
+  display: block;
+}
+
+.sub-categories li {
+  font-size: 14px;
+  color: #6b7280;
+  padding: 4px 0;
+}
+
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.award-item:hover .action-buttons {
+  opacity: 1;
+}
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.modal label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.modal input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.modal-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #2563eb;
+  color: white;
+}
+
+.modal-actions button[type="submit"]:hover {
+  background-color: #1d4ed8;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #f9fafb;
+  color: #374151;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #e5e7eb;
+}
+
+@media (max-width: 768px) {
+  .award-category-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .award-item {
+    padding: 12px;
+  }
+
+  .modal {
+    width: 90%;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,43 @@
+.guideline-container {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease;
+}
+
+.guideline-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #163172;
+  margin-bottom: 15px;
+}
+
+.guideline-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 16px;
+}
+
+.guideline-table th,
+.guideline-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.guideline-table th {
+  background-color: #f5f6f5;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.guideline-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.guideline-table tr:hover {
+  background-color: #f1f1f1;
+}

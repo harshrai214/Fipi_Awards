@@ -1,0 +1,29 @@
+.formula-container {
+  padding: 24px;
+  background-color: #f4f6f8;
+}
+
+.formula-heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #0d47a1;
+}
+
+.formula-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.formula-table th,
+.formula-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.formula-table th {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+}

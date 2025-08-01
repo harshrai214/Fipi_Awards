@@ -1,0 +1,57 @@
+.guidelinee-container {
+  padding: 24px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.guidelinee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  table-layout: fixed; /* Ensures columns respect the set widths */
+}
+
+.guidelinee-table th,
+.guidelinee-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+.guidelinee-table th:nth-child(4),
+.guidelinee-table td:nth-child(4) {
+  width: 40%; /* Wider formula column */
+  white-space: nowrap; /* Prevents wrapping */
+  overflow-x: auto;     /* Allows horizontal scrolling if needed */
+}
+
+.guidelinee-table th:nth-child(1),
+.guidelinee-table td:nth-child(1) {
+  width: 25%;
+}
+
+.guidelinee-table th:nth-child(2),
+.guidelinee-table td:nth-child(2) {
+  width: 10%;
+}
+
+.guidelinee-table th:nth-child(3),
+.guidelinee-table td:nth-child(3) {
+  width: 25%;
+}
+
+
+
+.notes {
+  margin-top: 20px;
+  font-size: 13px;
+  background: #eef5ff;
+  padding: 12px;
+  border-left: 4px solid #007bff;
+  line-height: 1.5;
+}
+
+
+

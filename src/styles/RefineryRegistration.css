@@ -1,0 +1,176 @@
+.registration-form {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.registration-form h2 {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.form-step {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-step h3 {
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.form-step label {
+  font-weight: 500;
+  color: #374151;
+}
+
+.form-step input,
+.form-step select,
+.form-step textarea {
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.form-step textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.error {
+  color: #dc2626;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #fee2e2;
+  border-radius: 4px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-next,
+.btn-prev,
+.btn-submit,
+.btn-print {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-next {
+  background-color: #1d4ed8;
+  color: #ffffff;
+}
+
+.btn-next:hover {
+  background-color: #2563eb;
+}
+
+.btn-prev {
+  background-color: #6b7280;
+  color: #ffffff;
+}
+
+.btn-prev:hover {
+  background-color: #4b5563;
+}
+
+.btn-submit {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.btn-submit:hover {
+  background-color: #15803d;
+}
+
+.btn-print {
+  background-color: #9333ea;
+  color: #ffffff;
+}
+
+.btn-print:hover {
+  background-color: #7e22ce;
+}
+
+.quant-table,
+.attachment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.quant-table th,
+.quant-table td,
+.attachment-table th,
+.attachment-table td {
+  border: 1px solid #e5e7eb;
+  padding: 8px;
+  text-align: left;
+}
+
+.quant-table th,
+.attachment-table th {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.quant-table input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media print {
+  .btn-next,
+  .btn-prev,
+  .btn-submit,
+  .btn-print,
+  .error {
+    display: none;
+  }
+  .registration-form {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .registration-form {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .quant-table,
+  .attachment-table {
+    font-size: 12px;
+  }
+
+  .quant-table th,
+  .quant-table td,
+  .attachment-table th,
+  .attachment-table td {
+    padding: 6px;
+  }
+}

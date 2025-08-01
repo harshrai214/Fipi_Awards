@@ -1,0 +1,75 @@
+/* AboutPage.css */
+.about-page {
+  font-family: 'Source Sans Pro', 'Arial', sans-serif;
+  color: #333333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  line-height: 1.75;
+}
+
+.about-page h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-page p {
+  font-size: 16px;
+  color: #4a5568;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-page a {
+  color: #1e3a8a;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.about-page a:hover {
+  color: #163172;
+  text-decoration: underline;
+}
+
+.about-page .highlight {
+  background-color: #eef2f7;
+  padding: 15px;
+  border-left: 4px solid #1e3a8a;
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+.about-page .highlight a {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-page h2 {
+    font-size: 28px;
+  }
+
+  .about-page p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-page h2 {
+    font-size: 24px;
+  }
+
+  .about-page p {
+    font-size: 14px;
+  }
+
+  .about-page .highlight {
+    padding: 10px;
+  }
+}

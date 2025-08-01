@@ -1,0 +1,225 @@
+/* === ATTACHMENT LIST LAYOUT === */
+.document-upload {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #2c3e50;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.step-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* .form-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #374151;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+} */
+
+.form-input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+}
+
+.form-input[type="file"] {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.form-input[type="file"]:focus {
+  border-color: #2563eb;
+}
+
+.file-name {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.error-message {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #dc2626;
+  font-weight: 500;
+  background-color: #fee2e2;
+  padding: 6px 10px;
+  border-radius: 6px;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* === NAVIGATION STYLES === */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-outline {
+  background: #ffffff;
+  border: 2px solid #3b82f6;
+  color: #3b82f6;
+}
+
+.btn-outline:hover {
+  background: #3b82f6;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: linear-gradient(90deg, #16a34a, #34d399);
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background: linear-gradient(90deg, #15803d, #22c55e);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .document-upload {
+    padding: 16px;
+    margin: 20px auto;
+  }
+
+  .form-navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .form-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+  .declaration-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.declaration-section:hover {
+  background-color: #eef6ff;
+}
+
+.declaration-label {
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1f2937;
+}
+
+.declaration-label input[type="checkbox"] {
+  transform: scale(1.3);
+  accent-color: #2563eb;
+  cursor: pointer;
+}
+
+.definition-notes {
+  margin-top: 1.5rem;
+  background: #f5f7fa;
+  border-left: 4px solid #2563eb;
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-radius: 5px;
+  color: #374151;
+}
+
+.definition-notes ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+}
+
+.definition-notes li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+}
+
+}

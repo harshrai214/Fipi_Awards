@@ -1,0 +1,366 @@
+/* Styling for RegistrationProduction component, inspired by typical RegistrationForm styling */
+/* General container styling */
+.application-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form header */
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-header h1 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #fff;
+  
+  margin-bottom: 8px;
+}
+
+.form-header p {
+  font-size: 16px;
+  color: #4b5563;
+}
+.form-header h6 {
+  font-size: 16px;
+  color: #fff;
+
+}
+
+/* Error message */
+.error {
+  color: #ef4444;
+  font-size: 14px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Progress bar */
+.progress-bar {
+  background-color: #e5e7eb;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.progress {
+  background-color: #2563eb;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Form step */
+.form-step {
+  padding: 20px;
+}
+
+/* Step title */
+.step-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 24px;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.form-group label .text-red {
+  color: #ef4444;
+}
+
+/* Form inputs */
+.form-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-input.has-error {
+  border-color: #ef4444;
+}
+
+/* Textarea */
+.form-textarea {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  resize: vertical;
+  min-height: 80px;
+  transition: border-color 0.2s;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-textarea.has-error {
+  border-color: #ef4444;
+}
+
+/* Error tooltip */
+.error-tooltip {
+  color: #ef4444;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Checkbox */
+.form-checkbox {
+  margin-right: 8px;
+}
+
+/* Note text */
+.note {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+/* Step section */
+.step-section {
+  margin-bottom: 24px;
+}
+
+.step-section h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 16px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+table th,
+table td {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  font-size: 14px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+table td input,
+table td textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+}
+
+table td textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+/* Form navigation */
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.form-navigation-step1 {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  gap: 10px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.btn-outline:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  border: 1px solid #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+.btn-success {
+  background-color: #16a34a;
+  border: 1px solid #16a34a;
+  color: #ffffff;
+}
+
+.btn-success:hover {
+  background-color: #15803d;
+  border-color: #15803d;
+}
+
+/* File name display */
+.file-name {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* Notes section */
+.notes {
+  margin-top: 24px;
+}
+
+.notes p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.notes ol {
+  padding-left: 20px;
+}
+
+.notes li {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .application-form {
+    padding: 16px;
+  }
+
+  .form-header h1 {
+    font-size: 20px;
+  }
+
+  .form-header p {
+    font-size: 14px;
+  }
+
+  .step-title {
+    font-size: 18px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-input,
+  .form-textarea,
+  table td input,
+  table td textarea {
+    font-size: 13px;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+.thank-you-message {
+  margin: 40px auto;
+  padding: 30px;
+  max-width: 600px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  background-color: #e8f5e9;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.thank-you-message h2 {
+  color: #2e7d32;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.thank-you-message p {
+  font-size: 18px;
+  color: #4a4a4a;
+}
+
+/* Optional button styling */
+.thank-you-message button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #388e3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.thank-you-message button:hover {
+  background-color: #2e7d32;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,98 @@
+.quantitative-form {
+  margin: 20px auto;
+  max-width: 1000px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.quantitative-form h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #1f2937;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 6px;
+}
+
+.quantitative-form h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #374151;
+}
+
+.quant-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+.quant-table th,
+.quant-table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.quant-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #111827;
+}
+
+.quant-table input,
+.quant-table textarea {
+  width: 100%;
+  padding: 6px 8px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.quant-table input[type='number']::-webkit-inner-spin-button,
+.quant-table input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-group {
+  margin-top: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-height: 80px;
+  resize: vertical;
+}
+
+@media screen and (max-width: 768px) {
+  .quantitative-form {
+    padding: 16px;
+  }
+
+  .quant-table th, .quant-table td {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .quant-table input, .quant-table textarea {
+    font-size: 13px;
+  }
+}

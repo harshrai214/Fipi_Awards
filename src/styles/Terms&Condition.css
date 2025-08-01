@@ -1,0 +1,30 @@
+.container {
+  max-width: 1000px;
+  margin: -7px 30px;
+  padding: px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f28c38; /* Orange color matching the image */
+  margin-bottom: 16px;
+}
+
+.content-box {
+  background-color: #fff;
+
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.terms-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.8;
+}
+
+.terms-list li {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,117 @@
+/* Existing guideline-table styles (update or append) */
+.guideline-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.guideline-table th,
+.guideline-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.guideline-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* New styles for proper alignment */
+.guideline-table th:nth-child(1),
+.guideline-table td:nth-child(1) {
+  width: 5%; /* Narrow column for S.No */
+  text-align: center;
+}
+
+.guideline-table th:nth-child(2),
+.guideline-table td:nth-child(2) {
+  width: 40%; /* Wider column for Parameter */
+  text-align: left;
+  word-wrap: break-word; /* Allow long text to wrap */
+  max-width: 0; /* Ensure wrapping works */
+}
+
+.guideline-table th:nth-child(3),
+.guideline-table td:nth-child(3) {
+  width: 55%; /* Wider column for Description */
+  text-align: left;
+  word-wrap: break-word; /* Allow long text to wrap */
+  max-width: 0; /* Ensure wrapping works */
+}
+
+/* Notes section styling */
+.guideline-notes {
+  margin-top: 20px;
+}
+
+.guideline-notes h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #163172;
+  margin-bottom: 10px;
+}
+
+.guideline-notes ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.guideline-notes ul li {
+  font-size: 17px;
+  color: #4a5568;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.guideline-notes ul li strong {
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+/* Responsive adjustments for tables */
+@media (max-width: 768px) {
+  .guideline-table th,
+  .guideline-table td {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .guideline-table th:nth-child(1),
+  .guideline-table td:nth-child(1) {
+    width: 10%; /* Slightly wider S.No on mobile */
+  }
+
+  .guideline-table th:nth-child(2),
+  .guideline-table td:nth-child(2) {
+    width: 35%; /* Adjusted for mobile */
+  }
+
+  .guideline-table th:nth-child(3),
+  .guideline-table td:nth-child(3) {
+    width: 55%; /* Adjusted for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .guideline-table {
+    font-size: 10px;
+  }
+
+  .guideline-table th:nth-child(1),
+  .guideline-table td:nth-child(1) {
+    width: 15%; /* Wider S.No on small screens */
+  }
+
+  .guideline-table th:nth-child(2),
+  .guideline-table td:nth-child(2) {
+    width: 30%; /* Narrower Parameter on small screens */
+  }
+
+  .guideline-table th:nth-child(3),
+  .guideline-table td:nth-child(3) {
+    width: 55%; /* Maintain Description space */
+  }
+}
