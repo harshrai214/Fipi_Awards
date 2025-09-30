@@ -31,32 +31,195 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
   ];
 
   const awards = [
-    { title: 'Exploration Company of the Year', objective: "The “Exploration Company of the Year” award is given in recognition of leadership and excellence in performance in Exploration for Oil and Gas in India during 2024-25.", eligibility: "FIPI will consider entries from Exploration & Production (E&P) of hydrocarbons companies and E&P divisions of integrated companies." },
-    { title: 'Oil & Gas Production Company of the Year (< 1 MMTOE)', objective: "The “Oil & Gas Production Company of the Year” award is given in recognition of leadership and excellence in performance in Production for Oil and Gas in India during 2024-25.", eligibility: "The award is open to Indian Companies who are engaged in Production of Oil & Gas in India as an Operator. FIPI will consider entries from Exploration & Production of hydrocarbons (E&P) companies and E&P divisions of integrated companies." },
-    { title: 'Oil & Gas Production Company of the Year (>= 1 MMTOE)', objective: "The “Oil & Gas Production Company of the Year” award is given in recognition of leadership and excellence in performance in Production for Oil and Gas in India during 2024-25.", eligibility: 'The award is open to Indian Companies who are engaged in Production of Oil & Gas in India as an Operator. FIPI will consider entries from Exploration & Production of hydrocarbons (E&P) companies and E&P divisions of integrated companies.' },
-    { title: 'Goal Net Zero Company of the Year', objective: "Goal Net Zero Company of the year Award, recognizes the most effective company in reducing Carbon footprint and improving energy efficiency.", eligibility: "The award is open to all Energy Companies operating in India. The information related to Capital Investments, Installed capacities, R&D centres, Patents etc. should pertains to works carried out in India. Any overseas investments and projects will not be considered for evaluation." },
-    { title: 'Green Hydrogen Company of the Year', objective: "Green Hydrogen - Company of the year Award recognizes the significant contributions towards the initiatives in promoting Green Hydrogen.", eligibility: "The award is open to all Energy Companies operating in India." },
-    { title: 'Overseas Oil & Gas Company of the Year', eligibility: "The award is open to all Indian Companies who are engaged in the Exploration & Production of Oil & Gas in Overseas Countries. FIPI will consider entries from Exploration & Production of hydrocarbons (E&P) companies and E&P divisions of integrated companies ", objective: "The “Overseas Oil & Gas Company of the Year” award is given in recognition of leadership and excellence in performance in exploration and production of Oil & Gas in Overseas Countries during 2024-25 " },
-    { title: 'Digital Technology Provider of the Year', objective: "The award ‘Digital Technology Provider of the Year’ recognizes the leadership in performance of a company in implementing the most cutting-edge digital technologies in Oil & Gas sector. ", eligibility: "The award is open to any company in India, implementing digital technologies in Oil & Gas sector. Performance during the year 2024-25 will be considered for evaluation. ", checklist: [{ label: "Presence in India as a company implementing digital technologies for Oil & Gas Sector", key: "Project" }] },
-    { title: 'Service Provider of the Year', objective: "This award is to recognize the activities carried out by Service Providers in the Oil and Gas sector and has contributed significantly, efficiently and in a safe and environment friendly manner.", eligibility: "The award is open to all Oil & Gas Service Providers operating in India providing services to Indian Oil and Gas companies.", checklist: [{ label: "Company should be involved in providing service to one or more of Upstream, Midstream or Downstream companies of Oil and Gas in India.", key: "Service 2025" }, { label: "Company should have an establishment in India ", key: "India origin" }] },
-    { title: 'Pipeline Transportation Company of the Year', objective: "‘Pipeline Transportation Company of the Year’ award recognizes leadership and excellence in performance in transporting crude oil, petroleum products and Natural Gas through pipelines in India", eligibility: "The award is open to companies owning and operating pipeline used for interstate transportation of Oil/Petroleum Products/ Natural Gas in India. " },
-    { title: 'Oil Marketing Company of the Year', objective: "Oil Marketing Company of the Year recognizes leadership and excellence in marketing and retailing of petroleum products (non-polymer hydrocarbons).", eligibility: "The award is open to all oil marketing and retailing companies operating in India." },
-    { title: 'Human Resource Management Company of the Year', objective: "This award recognizes the contribution of company’s Human Resource Management in achieving excellence across the entire spectrum of HR management in the company.", eligibility: "This award is open to all Oil & Gas companies operating in India." },
-    { title: 'CBG Company of the Year', objective: "To recognize and honor the company with the best initiatives in Compressed Bio-Gas (CBG) in India for excellence in capacity expansion, capex utilisation, Research & Development and patents filed in this field during the financial year 2024–25. ", eligibility: "The award is open to all energy companies operating in India involved in Compressed Bio-Gas (CBG). Any overseas investments and projects will not be considered for evaluation. " },
-    { title: 'CGD Company of the Year', objective: "To recognize and honor the best-performing City Gas Distribution (CGD) company in India for excellence in infrastructure expansion, operational performance, customer service, safety, and overall impact in the CGD sector during the financial year 2024–25.", eligibility: <ul><li>The award is open to all energy companies operating in India involved in City Gas Distribution (CGD)</li><li>Participants must adhere to the FIPI Awards Scheme Terms & Conditions</li><li>Performance data is evaluated based on achievements in FY2024–25 compared to FY2023–24 and aligned against Minimum Work Programme (MWP) targets.</li></ul> },
-    { title: 'Best Managed Project of the Year', objective: "The “Exploration Company of the Year” award is given in recognition of leadership and excellence in performance in Exploration for Oil and Gas in India during 2024-25.", eligibility: "The award is open to all Oil & Gas companies operating in India.", checklist: [{ label: 'The project completed in Indian territory, directly contributing to oil and gas value chain including biofuels, carbon recycling and renewables.', key: 'indianTerritoryProject' }, { label: 'Projects commercially completed / commissioned during 2024-25', key: 'completed2024_25' }, { label: 'The budgeted value of the project must be more', key: 'budgetValueHigh' }], note: "It is expected that only best project entry will be submitted however, maximum of 2 entries are permitted per company. All entries must be recommended by the Corporate Office of the company." },
-    { title: 'Refinery of the Year', checklist: [{ label: 'Presence in India as an individual crude oil refinery', key: 'presenceInIndia' }, { label: 'Exports finished products', key: 'exportsFinishedProducts' }], objective: "‘The Refinery of the Year’ awards are given in recognition of leadership & excellence in refining of petroleum in India.", eligibility: "The award is open to individual crude oil refineries operating in India. Companies are encouraged to apply for individual refineries separately for their leadership in performance in refining of crude oil in India during the year of award" },
-    { title: 'Innovator of the year (team)', objective: "Innovator of the year (Team) Award recognizes the most effective and efficient team in the energy sector.", eligibility: "The award is open to all Energy Companies* operating in India.", note: "The award is open to all Energy Companies operating in India. The information related to Capital Investments, Installed capacities, R&D centres, Patents etc. should pertains to works carried out in India. Any overseas investments and projects will not be considered for evaluation." },
-    { title: 'Woman Executive of the Year', objective: "Woman Executive of the Year in Oil and Gas industry honors a woman achiever for what she has done for the business and as a mentor. It is a celebration of courage, grit and professionalism.", eligibility: <ul><li>Service experience greater than 15 yrs</li><li>Only 2 nominations from an organization duly endorsed by CMD/MD in case of PSUs and CEO or equivalent senior executive of private Companies would be considered.</li><li>Endorsement letter from the above-mentioned authorities to be submitted along with the application; failing which, application will not be considered.</li></ul> },
-    { title: 'Young Achiever of the Year(Female)', objective: "Young achiever of the Year in the Oil and Gas Industry recognizes exceptional contribution in the line of work that sets one apart from her peers.", eligibility: <ul><li>Candidate not over 40 years of age as on the date of filling the application form </li><li>Only 3 nominations from an organization duly endorsed by Director (HR) in case of PSUs and CEOs of Private Companies would be considered. </li><li>Endorsement letter from Dir (HR) / CEO’s to be submitted along with the application; failing which, application will not be considered</li></ul> },
-    { title: 'Young Achiever of the Year(Male)', objective: "Young achiever of the Year in the Oil and Gas Industry recognizes exceptional contribution in the line of work that sets one apart from his peers.", eligibility: <ul><li>Candidate not over 40 years of age as on the date of filling the application form</li><li>Only 3 nominations from an organization duly endorsed by Director (HR) in case of PSUs and CEOs of Private Companies would be considered</li><li>Endorsement letter from Dir (HR)/ CEO’s to be submitted along with the application; failing which, application will not be considered</li></ul> },
+    {
+      title: 'Exploration Company of the Year',
+      objective: <ul><li> The “Exploration Company of the Year” award is given in recognition of leadership and
+        excellence in performance in Exploration for Oil and Gas in India during 2024-25.</li></ul>,
+      eligibility: <ul>
+        <li>The award is open to Indian Companies who are engaged in Exploration of Oil & Gas in India
+          as an Operator.</li>
+        <li>Entries from Exploration & Production (E&P) of hydrocarbons companies and E&P divisions
+          of integrated companies will be considered. </li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level
+          Executive would be considered.</li></ul>
+    },
+    {
+      title: 'Oil & Gas Production Company of the Year (< 1 MMTOE)',
+      objective: <ul><li>The “Oil & Gas Production Company of the Year” award is given in recognition of leadership and excellence in performance in Production for Oil and Gas in India during 2024-25.</li></ul>,
+      eligibility: <ul><li>The award is open to Indian Companies who are engaged in Production of Oil & Gas in India
+        as an Operator. </li>
+        <li>Entries from Exploration & Production (E&P) of hydrocarbons companies and E&P divisions
+          of integrated companies will be considered.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level
+          Executive would be considered. </li></ul>
+    },
+    {
+      title: 'Oil & Gas Production Company of the Year (>= 1 MMTOE)',
+      objective: <ul><li>The “Oil & Gas Production Company of the Year” award is given in recognition of leadership and excellence in performance in Production for Oil and Gas in India during 2024-25.</li></ul>,
+      eligibility: <ul><li>The award is open to Indian Companies who are engaged in Production of Oil & Gas in India
+        as an Operator.</li>
+        <li>Entries from Exploration & Production (E&P) of hydrocarbons companies and E&P divisions
+          of integrated companies will be considered. </li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level
+          Executive would be considered. </li>
+      </ul>
+    },
+    {
+      title: 'Goal Net Zero Company of the Year',
+      objective: <ul><li>The “Goal Net Zero Company of the Year” award recognizes the most effective company in
+        reducing Carbon footprint and improving energy efficiency.</li></ul>,
+      eligibility: <ul><li>The award is open to all Energy Companies operating in India. The information related to Capital Investments,  Installed capacities, R&D centres, Patents etc. should pertains to works carried out in India. Any overseas investments and projects  will not be considered for evaluation.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Green Hydrogen Company of the Year',
+      objective: <ul><li>The “Green Hydrogen Company of the Year” award recognizes the significant contributions
+        towards the initiatives in promoting Green Hydrogen.</li></ul>,
+      eligibility: <ul><li>The award is open to all Energy Companies operating in India. The information related to Capital Investments, installed capacities, R&D centres, Patents etc. should pertain to works carried out in India. Any overseas investments and projects will not be considered for evaluation.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Overseas Oil & Gas Company of the Year',
+      eligibility: <ul><li>The award is open to all Indian Companies who are engaged in the Exploration & Production
+        of Oil & Gas in Overseas Countries </li>
+        <li>Entries from Exploration & Production (E&P) of hydrocarbons companies and E&P divisions
+          of integrated companies will be considered.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level
+          Executive would be considered. </li></ul>,
+      objective: <ul><li>The “Overseas Oil & Gas Company of the Year” award is given in recognition of leadership and excellence in performance in exploration and production of Oil & Gas in Overseas Countries during 2024-25.</li>
+      </ul>
+    },
+    {
+      title: 'Digital Technology Provider of the Year',
+      objective: <ul><li>The award ‘Digital Technology Provider of the Year’ recognizes the leadership in performance
+        of a company in implementing the most cutting-edge digital technologies in Oil & Gas sector. </li></ul>,
+      eligibility: <ul><li>The award is open to any company having a presence in India, that is implementing
+        digital technologies in the Oil & Gas sector. </li>
+        <li>Performance during the year 2024-25 will be considered for evaluation.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level 
+Executive would be considered. </li>
+      </ul>,
+    },
+    {
+      title: 'Service Provider of the Year',
+      objective: <ul><li>The “Service Provider of the Year” award recognizes the activities carried out by Service
+        Providers in the Oil and Gas sector and has contributed significantly, efficiently and in a safe
+        and environment friendly manner.</li></ul>,
+      eligibility: <ul><li>The award is open to all Oil & Gas Service Providers operating in India providing services to
+        Indian Oil and Gas companies </li>
+        <li>The Company should be involved in providing service to one or more of Upstream,
+          Midstream or Downstream companies of Oil and Gas in India. </li>
+        <li>Company should have an establishment in India </li>
+
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level
+          Executive would be considered. </li>
+      </ul>,
+    },
+    {
+      title: 'Pipeline Transportation Company of the Year',
+      objective: <ul><li>Pipeline transportation company of the year award recognizes leadership and excellence in performance in transporting crude oil, petroleum products and natural gas through pipelines in India.</li></ul>,
+      eligibility: <ul><li>The award is open to companies owning and operating pipeline used for interstate transportation of Oil/Petroleum Products/ Natural Gas in India.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Oil Marketing Company of the Year',
+      objective: <ul><li>Oil Marketing Company of the Year recognizes leadership and excellence in marketing and retailing of petroleum products (non-polymer hydrocarbons).</li></ul>,
+      eligibility: <ul><li>The award is open to all oil marketing and retailing companies operating in India.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Human Resource Management Company of the Year',
+      objective: <ul><li>This award recognizes the contribution of company’s Human Resource Management in achieving excellence across the entire spectrum of HR management in the company. </li></ul>,
+      eligibility: <ul><li>This award is open to all Oil & Gas companies operating in India.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'CBG Company of the Year',
+      objective: <ul><li>To recognize and honor the company with the best initiatives in Compressed Bio-Gas (CBG) in India for excellence in capacity expansion, capex utilisation, Research & Development and patents filed in this field during the financial year 2024–25.</li></ul>,
+      eligibility: <ul><li>The award is open to all energy companies operating in India involved in Compressed Bio-Gas (CBG). Any overseas investments and projects will not be considered for evaluation.</li>
+        <li>Participants must adhere to the FIPI Awards Scheme Terms & Conditions. </li>
+        <li>Performance data is evaluated based on data from FY2024–25 compared to FY2023–24.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'CGD Company of the Year',
+      objective: <ul><li>To recognize and honor the best-performing City Gas Distribution (CGD) company in India for excellence in infrastructure expansion, operational performance, customer service, safety, and overall impact in the CGD sector during the financial year 2024–25.</li></ul>,
+      eligibility: <ul><li>The award is open to all energy companies operating in India involved in City Gas Distribution (CGD).</li>
+        <li>Participants must adhere to the FIPI Awards Scheme Terms & Conditions.</li>
+        <li>Performance data is evaluated based on achievements in FY2024–25 compared to FY2023–24 and aligned against Minimum Work Programme (MWP) targets.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Best Managed Project of the Year',
+      objective: <ul><li>The award is open to all Oil & Gas companies operating in India. </li></ul>,
+      eligibility: <ul><li>The award is open to all Oil & Gas companies operating in India. </li>
+        <li>Eligible projects must be completed within Indian territory and should directly contribute to
+          the oil and gas value chain, including areas such as biofuels, carbon recycling, and
+          renewables.</li>
+        <li>Only projects that have been commercially completed / commissioned during the financial
+          year 2024–25 will be considered. </li>
+        <li>The budgeted value of the project must be more than or equal to INR 500 Crore. </li>
+        <li>Only 2 nominations from an organization duly endorsed by concerned Director / Board Level
+          Executive would be considered. </li>
+      </ul>,
+    },
+    {
+      title: 'Refinery of the Year',
+      objective: <ul><li>‘The Refinery of the Year’ awards are given in recognition of leadership & excellence in refining of petroleum in India.</li></ul>,
+      eligibility: <ul><li>The award is open to individual crude oil refineries operating in India. Companies are encouraged to apply for individual refineries separately for their leadership in performance in refining of crude oil in India during the assessment period.</li>
+        <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+      </ul>, checklist: [{ label: 'Presence in India as an individual crude oil refinery', key: 'presenceInIndia' }],
+    },
+    {
+      title: 'Woman Executive of the Year',
+      objective: <ul><li>Woman Executive of the Year in Oil and Gas industry honors a woman achiever for what she has done for the business and as a mentor. It is a celebration of courage, grit and professionalism.</li></ul>,
+      eligibility: <ul><li>Service experience greater than 15 yrs.</li>
+        <li>Only 2 nominations from an organization duly endorsed by CMD/MD in case of PSUs and CEO or equivalent senior executive of private Companies would be considered.</li>
+        <li>Endorsement letter from the above-mentioned authorities to be submitted along with the application; failing which, application will not be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Young Achiever of the Year (Female)',
+      objective: <ul><li>Young achiever of the Year in the Oil and Gas Industry recognizes exceptional contribution in the line of work that sets one apart from her peers.</li></ul>,
+      eligibility: <ul><li>Candidate not over 40 years of age as on the date of filling the application form.</li>
+        <li>Only 3 nominations from an organization duly endorsed by Director (HR) in case of PSUs and CEOs of Private Companies would be considered. </li>
+        <li>Endorsement letter from Dir (HR) / CEO’s to be submitted along with the application; failing which, application will not be considered.</li>
+      </ul>
+    },
+    {
+      title: 'Young Achiever of the Year (Male)',
+      objective: <ul><li>Young achiever of the Year in the Oil and Gas Industry recognizes exceptional contribution in the line of work that sets one apart from his peers.</li></ul>,
+      eligibility: <ul><li>Candidate not over 40 years of age as on the date of filling the application form.</li>
+        <li>Only 3 nominations from an organization duly endorsed by Director (HR) in case of PSUs and CEOs of Private Companies would be considered.</li>
+        <li>Endorsement letter from Dir (HR)/ CEO’s to be submitted along with the application; failing which, application will not be considered.</li>
+      </ul>
+    },
+
+    {
+      title: "Innovator of the year (team)",
+      objective: <ul><li>To recognize and honor the Innovator of the Year (Team) in India for the impact of their innovation in the assessment year.</li></ul>,
+      eligibility: <ul>
+        <li>The award is open to all organisations operating in India in the energy sector.</li>
+        <li>Participants must adhere to the FIPI Awards Scheme Terms & Conditions.</li>
+        <li>Performance data is subjectively evaluated based on the responses received in the nominations.</li>
+        <li>Only 5 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li>
+
+      </ul>
+    }
   ];
 
   const boardMembers = [
-    { name: 'Shri Anil Razdan', designation: 'Former Secretary, Government of India ' },
-    { name: 'Shri B. C. Tripathi', designation: 'Former CMD, GAIL' },
+    { name: 'Shri Anil Razdan', designation: 'Former Secretary, Government of India' },
+    { name: 'Shri B. C. Tripathi', designation: 'Former CMD, Gas Authority of (India) Limited' },
     { name: 'Shri B. Ashok', designation: 'Former Chairman, Indian Oil Corporation Limited.' },
-    { name: 'Shri D. K. Sarraf', designation: 'Former CMD, Oil and Natural Gas Corporation' },
+    { name: 'Shri D. K. Sarraf', designation: 'Former CMD, Oil and Natural Gas Corporation, Former Chairperson PNGRB' },
     { name: 'Dr. R. K. Malhotra', designation: 'Former Director (R&D), Indian Oil Corporation Limited.' },
   ];
 
@@ -64,7 +227,7 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
     { name: 'Dr. Anil Kakodkar', position: 'INAE Satish Dhawan Chair of Engineering Eminence, former Chairman, Atomic Energy Commission of India and Secretary to the Government of India, Atomic Research Centre' },
     { name: 'Dr. R. A. Mashelkar', position: 'President of the Global Research Alliance, Chairperson, former Director General, National Innovation Foundation of India, CSIR' },
     { name: 'Shri M. A. Pathan', position: 'Former Chairman, Indian Oil Corporation Limited' },
-    { name: 'Shri B. C. Bora', position: 'Former CMD, Oil & Natural Gas Corporation Limited' },
+    { name: 'Shri B. C. Bora', position: 'Former CMD, Oil and Natural Gas Corporation Limited, Former Director General, FIPI' },
   ];
 
   const [selectedAwardCategory, setSelectedAwardCategory] = useState('');
@@ -109,9 +272,10 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
         case "Refinery of the Year": navigate('/RegistrationRefinery', { state: { awardTitle: award.title } }); break;
         case "Innovator of the year (team)": navigate('/RegistrationInnovator', { state: { awardTitle: award.title } }); break;
         case "Woman Executive of the Year": navigate('/RegistrationWE', { state: { awardTitle: award.title } }); break;
-        case "Young Achiever of the Year(Female)": navigate('/RegistrationYF', { state: { awardTitle: award.title } }); break;
-        case "Young Achiever of the Year(Male)": navigate('/RegistrationYM', { state: { awardTitle: award.title } }); break;
+        case "Young Achiever of the Year (Female)": navigate('/RegistrationYF', { state: { awardTitle: award.title } }); break;
+        case "Young Achiever of the Year (Male)": navigate('/RegistrationYM', { state: { awardTitle: award.title } }); break;
         case "CGD Company of the Year": navigate('/RegistrationCGD', { state: { awardTitle: award.title } }); break;
+
         default: break;
       }
     };
@@ -122,17 +286,13 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
       setLoginType('user');
       setIsLoginModalOpen(true);
       setPostLoginAction(() => navigateToForm);
-      onLoginClick('user', navigateToForm);
-    }
-  };
+      if (typeof onLoginClick === 'function') {
+        onLoginClick('user', navigateToForm);
+      }
+    };
+  }
 
-  const handleStartApplication = () => {
-    if (isLoggedIn) {
-      navigate('/RegistrationForm');
-    } else {
-      setIsLoginModalOpen(true);
-    }
-  };
+
 
   const handleChecklistChange = (e) => {
     const { name, checked } = e.target;
@@ -189,10 +349,11 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
           )}
           {selectedAward.eligibility && (
             <div className="modal-section mb-4">
-              <h3 className="modal-subhead text-lg font-semibold">Eligibility</h3>
+              <h3 className="modal-subhead text-lg font-semibold">Eligibility Criteria</h3>
               <p>{selectedAward.eligibility}</p>
             </div>
           )}
+
           {renderChecklist()}
           <div className="modal-actions flex gap-2">
             <button onClick={() => handleApply(selectedAward)} className="button button-success button-sm px-3 py-1 text-sm">Apply Now</button>
@@ -213,7 +374,9 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
               <div className="tab-pane fade show active" id="v-pills-award" role="tabpanel" aria-labelledby="v-pills-award-tab">
                 <div className='content-box'>
                   <h2>About</h2>
-                  <p>The FIPI Oil and Gas Awards have been created to recognise the leaders, innovators and pioneers in the oil and gas industry. The objective of the FIPI Oil & Gas Awards is to celebrate the industry's most outstanding achievements. FIPI will select among applicants and reward those companies and individuals who have demonstrated an unparalleled ability to succeed, continually set standards of excellence, and who will be or are the stars of the industry. All companies operating in India, including those who are not members of FIPI, are eligible to apply. In our constant endeavour, every year FIPI revamp the Awards scheme making it more objective by adopting quantitative parameters to the extent possible. To keep up with the changing energy scenario, FIPI has incorporated clean energy awards last year, that recognizes the efforts of organizations in the field of renewables (solar and wind), hydrogen, CBG and CCUs. There are total eighteen categories of awards in which the performance of the prospective awardees will be judged.</p>
+
+                  <p>The FIPI Oil and Gas Awards have been created to recognise the leaders, innovators and pioneers in the oil and gas industry. The objective of the FIPI Oil & Gas Awards is to celebrate the industry's most outstanding achievements. FIPI will select among applicants and reward those companies and individuals who have demonstrated an unparalleled ability to succeed, continually set standards of excellence, and who will be or are the stars of the industry. All companies operating in India, including those who are not members of FIPI, are eligible to apply. In our constant endeavour, every year FIPI revamp the Awards scheme making it more objective by adopting quantitative parameters to the extent possible. To keep up with the changing energy scenario, FIPI has incorporated clean energy awards last year, that recognizes the efforts of organizations in the field of renewables (solar and wind), hydrogen, CBG and CCUs. There are total eighteen
+                    categories of awards in which the performance of the prospective awardees will be judged.</p>
                   <h2>Evaluation</h2>
                   <ul className="terms-list">
                     <li>Each award category needs to receive minimum number of entries for further evaluation. In case minimum number of entries are not received for any category by the last date of submission, FIPI reserves the right to drop the specific award category.</li>
@@ -233,15 +396,17 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
 
       case 'Award Categories':
         return (
-          
-          <div className="sidebar-content w-full max-w-full overflow-x-hidden">
+
+          <div className="sidebar-content-award w-full max-w-full overflow-x-hidden">
             <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical"></div>
             <div className="tab-content w-full max-w-full" id="v-pills-tabContent">
               <div className="tab-pane fade show active w-full max-w-full" id="v-pills-award" role="tabpanel" aria-labelledby="v-pills-award-tab">
                 <div className="content-box w-full max-w-full p-4">
                   <br></br>
                   <h2 className="text-2xl font-bold mb-4">Award Categories</h2>
-                  <p className="mb-4">The FIPI Oil & Gas Awards have been created to recognize the leaders, innovators, and pioneers in the oil and gas industry. The objective of the FIPI Oil & Gas Awards is to celebrate the industry's most outstanding achievements.</p>
+                  <div className="mb-4">
+                    <p></p>
+                  </div>
                   <div className="awards-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-full overflow-x-auto">
                     {awards.slice(0, showAllAwards ? awards.length : 19).map((award, index) => (
                       <div key={index} className="award-card bg-white shadow-md rounded-lg p-4 w-full max-w-full">
@@ -251,7 +416,7 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
                           </div>
                           <div className="award-footer ">
                             <button onClick={() => handleLearnMore(award)} className="button button-primary button-sm px-3 py-1 text-sm">Learn More</button>
-                            
+
                             <button onClick={() => handleApply(award)} className="button button-success button-sm px-3 py-1 text-sm">Apply Now</button>
                           </div>
                         </div>
@@ -270,10 +435,11 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
                         )}
                         {selectedAward.eligibility && (
                           <div className="modal-section mb-4">
-                            <h3 className="modal-subhead text-lg font-semibold">Eligibility</h3>
+                            <h3 className="modal-subhead text-lg font-semibold">Eligibility Criteria</h3>
                             <p>{selectedAward.eligibility}</p>
                           </div>
                         )}
+
                         {renderChecklist()}
                         <div className="modal-actions flex gap-2">
                           <button onClick={() => handleApply(selectedAward)} className="button button-success button-sm px-3 py-1 text-sm">Apply Now</button>
@@ -285,13 +451,7 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
                   {isLoginModalOpen && (
                     <LoginModal type={loginType} onClose={handleCloseLoginModal} onLoginSuccess={handleLoginSuccess} onRegisterClick={onRegisterClick} />
                   )}
-                  <div className="cta-section mt-6 w-full max-w-full">
-                    <div className="card-container bg-gray-100 p-4 rounded-lg text-center">
-                      <h2 className="cta-title text-xl font-bold mb-2">Ready to Apply?</h2>
-                      <p className="cta-description text-gray-600 mb-4">Join the prestigious FIPI Awards and showcase your excellence in the oil & gas industry</p>
-                      <button onClick={handleStartApplication} className="button button-primary button-lg px-6 py-2 text-sm">Start Your Application</button>
-                    </div>
-                  </div>
+
                 </div>
               </div>
             </div>
@@ -305,36 +465,36 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
             <div className="tab-content w-full max-w-full" id="v-pills-tabContent">
               <div className="tab-pane fade show active w-full max-w-full" id="v-pills-award" role="tabpanel" aria-labelledby="v-pills-award-tab">
                 <div className="content-box w-full max-w-full p-4">
-              <h2>Jury</h2>
-              <div style={{ overflowX: "auto" }}>
-              <table border="1" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
-                <tbody>
-                  {data.map((item, index) => (
-                    <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
-                      <td style={{ padding: '15px', width: '29%' }}>{item.name}</td>
-                      <td style={{ padding: '15px' }}>{item.position}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              </div>
-              <br></br>
-              <h2>Awards Committee</h2>
-              <div style={{ overflowX: "auto" }}>
-              <table border="1" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
-                <tbody>
-                  {boardMembers.map((member, index) => (
-                    <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
-                      <td style={{ padding: '20px', textAlign: 'left' }}>{member.name}</td>
-                      <td style={{ padding: '20px', textAlign: 'left' }}>{member.designation}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                  <h2>Jury</h2>
+                  <div style={{ overflowX: "auto" }}>
+                    <table border="1" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+                      <tbody>
+                        {data.map((item, index) => (
+                          <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
+                            <td style={{ padding: '15px', width: '29%' }}>{item.name}</td>
+                            <td style={{ padding: '15px' }}>{item.position}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <br></br>
+                  <h2>Awards Committee</h2>
+                  <div style={{ overflowX: "auto" }}>
+                    <table border="1" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+                      <tbody>
+                        {boardMembers.map((member, index) => (
+                          <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#ffffff' : '#f9f9f9' }}>
+                            <td style={{ padding: '20px', textAlign: 'left' }}>{member.name}</td>
+                            <td style={{ padding: '20px', textAlign: 'left' }}>{member.designation}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          </div>
           </div>
         );
 
@@ -350,17 +510,19 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
           </div>
         );
 
-    case 'Support':
-  return (
-    <div className="sidebar-content">
-      <div className="content-box">
-        <h2>Support</h2>
-        <div className="support-main-scroll">
-          <CallCenter />
-        </div>
-      </div>
-    </div>
-  );
+      case 'Support':
+        return (
+          <div className="sidebar-cont">
+            <div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical"></div>
+            <div className="tab-content" id="v-pills-tabContent"></div>
+
+            <h2>Support</h2>
+
+            <CallCenter />
+
+          </div>
+
+        );
 
 
       case 'dashboard':
@@ -370,7 +532,7 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
             <div className="tab-content" id="v-pills-tabContent">
               <div className="tab-pane fade show active" id="v-pills-award" role="tabpanel" aria-labelledby="v-pills-award-tab"></div>
               <h2>Dashboard</h2>
-              {userRole === 'admin' ? <AdminDashboard /> : <ApplicantDashboard onNavigate={navigate} />}
+              {userRole === 'admin' ? <AdminDashboard onNavigate={navigate} /> : <ApplicantDashboard onNavigate={navigate} />}
             </div>
           </div>
         ) : null;
@@ -391,6 +553,7 @@ const Sidebar = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegi
           </div>
         ))}
       </div>
+      
       {renderContent()}
       {isLoginModalOpen && (
         <LoginModal type={loginType} onClose={handleCloseLoginModal} onLoginSuccess={handleLoginSuccess} onRegisterClick={onRegisterClick} />

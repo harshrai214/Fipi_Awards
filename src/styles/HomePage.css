@@ -1,6 +1,7 @@
 .homepage {
   font-family: 'Source Sans Pro', sans-serif;
   color: #333;
+  min-width: 100vw;
 }
 
 .hero-section {
@@ -9,7 +10,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 300px;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,36 +27,80 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 20px;
+  padding: 15px;
 }
 
 .hero-content h1 {
   font-size: 36px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.1;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* Responsive background and text scaling */
-@media (max-width: 768px) {
-  .hero-section {
-    min-height: 180px;
-    padding: 10px;
-  }
-  .hero-content h1 {
-    font-size: 22px;
-    margin-bottom: 12px;
-  }
-}
-
-@media (max-width: 480px) {
+/* Media Queries */
+@media (max-width: 479px) {
   .hero-section {
     min-height: 120px;
-    padding: 6px;
+    padding: 10px;
   }
   .hero-content h1 {
     font-size: 16px;
     margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero-section {
+    min-height: 180px;
+    padding: 12px;
+  }
+  .hero-content h1 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section {
+    min-height: 250px;
+    padding: 15px;
+  }
+  .hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .hero-section {
+    min-height: 300px;
+    padding: 15px;
+  }
+  .hero-content h1 {
+    font-size: 28px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .hero-section {
+    min-height: 350px;
+    padding: 20px;
+  }
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-section {
+    min-height: 400px;
+    padding: 25px;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
   }
 }

@@ -5,6 +5,25 @@
   font-family: sans-serif;
 }
 
+.footer-wrapper a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-wrapper a:hover {
+  color: whitesmoke;
+  text-decoration: underline;
+}
+
+.footer-wrapper a:visited {
+  color:white;
+}
+
+.footer-wrapper a:active {
+  color: #333333;
+}
+
+
 .footer-top {
   display: flex;
   flex-wrap: wrap;

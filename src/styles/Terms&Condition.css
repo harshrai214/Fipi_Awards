@@ -1,21 +1,22 @@
 .container {
   max-width: 1000px;
-  margin: -7px 30px;
-  padding: px;
+  margin: -7px auto; /* Center horizontally with automatic left/right margins */
+  padding: 20px;     /* Added padding (fixed from 'padding: px;') */
+  box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .title {
   font-size: 24px;
   font-weight: bold;
-  color: #f28c38; /* Orange color matching the image */
+  color: #f28c38;
   margin-bottom: 16px;
 }
 
 .content-box {
   background-color: #fff;
-
   padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .terms-list {
@@ -27,4 +28,62 @@
 
 .terms-list li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;      /* Use most of the viewport width */
+    margin: 0 auto;      /* Center horizontally */
+    padding: 15px;       /* Slightly reduced padding */
+  }
+
+  .title {
+    font-size: 20px;     /* Smaller font on tablets and phones */
+  }
+
+  .content-box {
+    padding: 15px;
+  }
+
+  .terms-list {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 18px;     /* Further smaller font on small phones */
+  }
+
+  .content-box {
+    padding: 10px;
+  }
+
+  .terms-list {
+    padding-left: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1200px;    
+  }
+
+  .title {
+    font-size: 28px;      
+    margin-bottom: 24px;
+  }
+
+  .content-box {
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12); /* Slightly stronger shadow */
+  }
+
+  .terms-list {
+    padding-left: 30px;   /* More padding for better readability */
+    font-size: 16px;      /* Slightly larger font */
+  }
+
+  .terms-list li {
+    margin-bottom: 14px;  /* More spacing between list items */
+  }
 }

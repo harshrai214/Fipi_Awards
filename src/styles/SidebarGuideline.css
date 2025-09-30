@@ -1,168 +1,234 @@
-/* Container for sidebar and guideline content */
-.sidebar-guideline-container {
-  display: flex;
-  width: 100%;
-  min-height: 60vh; /* Positive height for visibility */
-  background-color: #f5f6f5; /* Light background for contrast */
-  overflow: hidden; /* Prevents overflow issues */
-}
 
-/* Main container for layout (if used with RegistrationForm) */
-.main-container {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-}
-
-/* Sidebar styling */
 .sidebarr {
-  width: 30%; /* Adjustable width for sidebar */
-    width: 250px;
-    background-color: #f8f9fa;
-    padding: 20px 0;
-    transition: width 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
-    padding-right: 15px;
-    padding-left: 84px;
-    position: relative;
-    overflow-y: auto;
-    max-width: 250px;
-    flex-shrink: 0;
+  width: 100%;
+  /* Full width on mobile */
+  max-width: none;
+  background-color: #f8f9fa;
+  padding: 10px;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow-y: auto;
+  flex-shrink: 0;
+
 }
 
 .sidebarr.open {
-  width: 15%; /* Maintains width when open */
+  transform: translateX(0);
+  box-shadow: 2px 0 12px rgba(255, 255, 255, 0.3);
 }
+
+.modall-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
 .sidebarr-container {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 30vh;
-  background-color: #f5f6f5; /* Light background for contrast */
-  overflow: hidden; /* Prevents overflow beyond screen */
+  flex-direction: row;
+  width: 25%;
+  min-height: 50vh;
+  background-color: #f5f6f5;
+  overflow: hidden;
+  
+
 }
 
-/* Sidebar content and guideline panel */
-.sidebarr-content.guideline-panel {
-  flex: 1;
-  padding: 20px;
-  background-color: #ca580a; /* Orange background */
-  overflow-y: auto; /* Scrollable if content overflows */
-  border-left: 4px solid #c9570a;
+.sidebarr.open {
+    width: 100%;
+    max-width: none;
+
+
 }
 
-.guideline-content h3 {
-  color: #ca580a; /* Matching orange for headings */
+.sidebarr:hover {
+  box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Sidebar item styling */
-.sidebarr-item {
+.navv{
+    width: 100%;
+  /* Full width on mobile */
+  max-width: none;
+  background-color: #f8f9fa;
+  padding: 10px;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.navv-item {
+ 
+
+
+padding: 12px 15px;
+  /* Touch-friendly */
   color: #333;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   border-radius: 4px;
   margin: 5px 10px;
-  padding: 10px 15px; /* Adjusted padding for better spacing */
   width: 100%;
-  text-align: left;
-  border: none;
-  background: none;
-  font-size: 16px;
-  display: block; /* Ensure it behaves like a button */
+  box-sizing: border-box;
+  min-height: 44px;
 }
 
-.sidebarr-item:hover {
-  background-color: #c65100; /* Darker orange on hover */
-  color: #ffffff; /* White text on hover */
-  transform: translateX(5px); /* Subtle slide effect */
-}
-
-.sidebarr-item.active {
-  background-color: #c65100; /* Active item background */
-  color: #ffffff; /* White text for contrast */
+.navv-item.home {
+  background-color: #c65100;
   font-weight: bold;
+  color: white;
 }
 
-/* Application form styling (for context with RegistrationForm) */
-.application-form {
-  width: 70%; /* Complementary width to sidebar */
-  padding: 20px;
+
+
+.modall-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  max-width: 750px;
+  width: 90%;
+  max-height: 90vh;
   overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Guideline container and content */
+.modall-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color:#1a3c6e;
+}
+
+.modall-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.navv-item:focus-within,
+.navv-item:focus,
+.navv-item.active {
+  background-color: #c65100;
+  color: white;
+  outline: none;
+}
+
+.navv-item:hover {
+  background-color: #e0e0e0;
+  transform: translateX(5px);
+}
+
+.navv-item.active{
+  background-color: #c65100;
+  font-weight: bold;
+  color: white;
+}
+
+.btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-outline {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+}
+
+.btn-outline:hover {
+  background-color: #f5f5f5;
+}
+
+
 .guideline-container {
   padding: 20px;
-  background-color: #fff;
-  color: #333; /* Default text color for readability */
+  font-family: Arial, sans-serif;
 }
 
-.guideline-heading {
-  font-size: 24px;
+.guideline-container h2 {
+  font-size: 1.3rem;
   font-weight: bold;
-  color: #163172; /* Dark blue for headings */
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
+  color: #1a3c6e;
 }
 
-.guideline-section {
+.guideline-container p {
+  margin-bottom: 15px;
+}
+
+.guideline-container p strong {
+  color: #000;
+}
+
+.guideline-table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: auto;
+
   margin-bottom: 20px;
 }
 
 .guideline-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  background-color: #fff;
 }
 
 .guideline-table th,
 .guideline-table td {
-  border: 1px solid #ccc;
-  padding: 8px 12px;
+  border: 1px solid #ddd;
+  padding: 8px;
   text-align: left;
 }
 
 .guideline-table th {
-  background-color: #f5f5f5; /* Light gray for table headers */
+  background-color: #f4f4f4;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-/* Navigation pills styling */
-.nav.flex-column.nav-pills {
-  padding: 0;
-  width: 100%;
+.guideline-table tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-.nav.flex-column.nav-pills .sidebarr-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.guideline-table td[colSpan="3"] {
+  font-weight: bold;
+  background-color: #e0e0e0;
+  text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .sidebar-guideline-container {
-    flex-direction: column;
-    min-height: auto; /* Reset for mobile */
-  }
-  .sidebarr {
-    width: 100%; /* Full width on mobile */
-  }
-  .application-form {
-    width: 100%; /* Full width on mobile */
-  }
-  .sidebarr-item {
-    padding: 8px 15px; /* Adjusted padding for mobile */
-  }
-  .sidebarr-content.guideline-panel {
-    width: 100%; /* Full width on mobile */
-  }
+.guideline-notes {
+  margin-top: 20px;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.guideline-notes h4 {
+  color: #333;
+}
+
+.guideline-notes ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.guideline-notes li {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 1440px) {
+    .sidebarr {
+        width: 300px;
+        max-width: 300px;
+        padding: 20px 15px;
+    }
 }

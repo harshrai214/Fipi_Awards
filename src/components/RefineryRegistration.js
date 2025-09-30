@@ -99,6 +99,13 @@ const RefineryRegistration = () => {
   };
 
   const nextStep = () => {
+
+    if(step==1 && (!formData.refinery))
+      {alert("name is rrquired");
+    return
+      }
+
+
     if (step === 2 && (!formData.approvingAuthorityName || !formData.approvingAuthorityEmail)) {
       setError('Approving authority name and email are required.');
       return;

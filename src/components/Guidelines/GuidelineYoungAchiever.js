@@ -5,15 +5,15 @@ const GuidelineYoungAchiever = () => {
     <div className="guideline-container">
       <h2 className="guideline-heading">Young Achiever of the Year</h2>
      <br></br>
-      <p><strong>Objective:</strong> Recognizes exceptional contribution in the line of work that sets one apart from peers.</p>
+      <p><strong>Objective:</strong>Young achiever of the Year in the Oil and Gas Industry recognizes exceptional contribution in the line of work that sets one apart from her peers.</p>
       <br></br>
-      <p><strong>Eligibility:</strong></p>
+      <p><strong>Eligibility  criteria:</strong></p>
       <ul>
-        <li>Candidate must not be over 40 years of age on the application date.</li>
-        <li>Maximum 3 nominations per organization endorsed by Director (HR) or CEO.</li>
-        <li>Endorsement letter is mandatory with the application.</li>
+        <li>Candidate not over 40 years of age as on the date of filling the application form .</li>
+        <li>Only 3 nominations from an organization duly endorsed by Director (HR) in case of PSUs and CEOs of Private Companies would be considered.</li>
+        <li>Endorsement letter from Dir (HR) or CEO to be submitted along with the application; failing which, application will not be considered.</li>
       </ul>
-      <p><strong>Evaluation:</strong> Based on the responses provided in the input sheet.</p>
+      <p><strong>Evaluation Guideline:</strong>Evaluation will be done on basis of the responses mentioned by the Applicant in the input sheet.</p>
     </div>
   );
 };

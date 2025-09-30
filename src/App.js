@@ -31,6 +31,20 @@ import RegistrationWE from './components/RegistrationWE';
 import RegistrationYM from './components/RegistrationYM';
 import RegistrationYF from './components/RegistrationYF';
 import RegistrationCGD from './components/RegistrationCGD';
+import GHscoretable from './components/Tables/GHscoretable';
+import Sidebar from './components/Sidebar';
+import DownloadExcelFromTemplate from './components/DownloadExcelFromTemplate';
+import CBGscoretable from './components/Tables/CBGscoretable';
+import Prodscoretable from "./components/Tables/Prodscoretable";
+import Refineryscoretable from "./components/Tables/Refineryscoretable";
+import GNZscoretable from "./components/Tables/GNZscoretable";
+import Overseasscoretable from "./components/Tables/Overseasscoretable";
+import Digitalscoretable from "./components/Tables/Digitalscoretable";
+import BMPscoretable from "./components/Tables/BMPscoretable";
+import HRMscoretable from "./components/Tables/HRMscoretable";
+import Sptable from "./components/Tables/Sptable";
+import Excelgnz from "./components/Excelgnz";
+
 
 function AppContent() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -194,8 +208,25 @@ function AppContent() {
               path="/RegistrationCGD"
               element={isLoggedIn ? <RegistrationCGD /> : <Navigate to="/fipiawards" replace />}
             />
-            <Route path="/" element={<Navigate to="/fipiawards" replace />} />
+             <Route path="/" element={<Navigate to="/fipiawards" replace />} />
+             
+             <Route path="/fipiawards" element={<Navigate to="/fipiawards" replace />} />
+             <Route path="/GHscoretable" element={<GHscoretable/>}/>
+             <Route path="/CBGscoretable" element={<CBGscoretable/>}/>
+             <Route path="/Prodscoretable" element={<Prodscoretable/>}/>
+             <Route path="/Refineryscoretable" element={<Refineryscoretable/>}/>
+             <Route path="/GNZscoretable" element={<GNZscoretable/>}/>
+             <Route path="/Overseasscoretable" element={<Overseasscoretable/>}/>
+             <Route path="/Digitalscoretable" element={<Digitalscoretable/>}/>
+             <Route path="/BMPscoretable" element={<BMPscoretable/>}/>
+             <Route path="/HRMscoretable" element={<HRMscoretable/>}/>
+             <Route path="/Sptable" element={<Sptable/>}/>
+             <Route path="/DownloadExcelFromTemplate" element={<DownloadExcelFromTemplate/>}/>
+             <Route path="/Excelgnz" element={<Excelgnz/>}/>
+
+             
           </Routes>
+         
         </div>
       </div>
       <FooterTabComponent />

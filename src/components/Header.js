@@ -34,27 +34,20 @@ const Header = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegis
   return (
     <header className="header">
       <div className="header-top">
-        {/* Desktop Actions (Search and Login or User Section) */}
+      
         {!isLoggedIn ? (
           <div className="desktop-actions">
-            {/* <div className="search-container">
-              <Search className="search-icon" size={16} />
-              <input
-                type="text"
-                placeholder="Search awards, applicants..."
-                className="search-input"
-              />
-            </div> */}
+           
             <div className="login-buttons">
               <button
                 onClick={() => handleLoginClickLocal('user')}
-                className="btn btn-primary"
+                className="btn header"
               >
                 Login
               </button>
               <button
                 onClick={() => setShowRegisterModal(true)}
-                className="btn btn-primary"
+                className="btn header"
               >
                 Registration
               </button>
@@ -95,19 +88,14 @@ const Header = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegis
               <div className="mobile-login-buttons">
                 <button
                   onClick={() => handleLoginClickLocal('user')}
-                  className="btn btn-primary"
+                  className="btn header"
                 >
-                  User Login
+                 Login
                 </button>
-                <button
-                  onClick={() => handleLoginClickLocal('admin')}
-                  className="btn btn-secondary"
-                >
-                  Admin Login
-                </button>
+
                 <button
                   onClick={() => setShowRegisterModal(true)}
-                  className="btn btn-primary"
+                  className="btn header"
                 >
                   Registration
                 </button>
@@ -126,7 +114,7 @@ const Header = ({ onLogin, isLoggedIn, userRole, onLogout, onLoginClick, onRegis
         </div>
       )}
 
-      {/* Render LoginModal conditionally */}
+      
       {showLoginModal && (
         <LoginModal
           type={loginType}

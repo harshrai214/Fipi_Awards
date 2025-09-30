@@ -2,100 +2,320 @@ import React from "react";
 import "../../styles/SidebarGuideline.css"; // Use the existing Sidebar.css
 
 const GuidelineDigital = () => {
-  const sections = [
-    {
-      heading: "1. Annual Revenue Declaration",
-      rows: [
-        ["1.1", "Revenue Earned from Digital Technology Services (INR Crores)", "Annual Revenue as earned from Digital Technology Services during the assessment year and as may be declared in the Annual Report of the Company"],
-        ["1.2", "Growth in Revenue Earned from Digital Technology Services (%)", "((Current yr – Previous yr)/ Previous yr) X 100"],
-        ["1.3", "Total Revenue of the Company (INR Crores)", "Total Annual Revenue of the Company"],
-      ],
-    },
-    {
-      heading: "2. Digital Technology Proliferation",
-      rows: [
-        ["2.1", "Name of Digital Technology Project", "Digital Technology Project Name"],
-        ["2.2", "Areas of Implementation", "Specific Areas"],
-        ["2.3", "Year of Commencement of Implementation", "Year"],
-        ["2.4", "No. of Customers as on date", "No. of customers (companies) using the particular technology in the assessment year"],
-        ["2.5", "Revenue till date (INR Crores)", "Revenue earned through this particular technology till 31st March of the assessment year"],
-        ["2.6", "Digital Technologies Implementation Index", "(Sum of (No. of customers*completed years))/3\nNote: Completed Years to be calculated: (2025-Year of Implementation)"],
-      ],
-    },
-    {
-      heading: "3. Upcoming / R&D on Digital Technology",
-      rows: [
-        ["3.1", "Year of Commencement of R&D", "Specific year on which the approval was obtained"],
-        ["3.2", "Investment (INR Crores)", "Total investment as envisaged in the approving document"],
-        ["3.3", "Patents Obtained", "Total number of patents obtained against the said technology"],
-        ["3.4", "The intangible areas where the R&D initiative is expected to add value*", "Please refer to the note below"],
-        ["3.5", "Total Investment", "Sum of investment in all 3 technologies (INR Crores)"],
-        ["3.6", "Total number of Patents Obtained", "Sum of patents obtained in all 3 technologies (Nos.)"],
-        ["3.7", "Total Investment in R&D in the Assessment Year (INR Crores)", "Investment made in R&D activities in the assessment year"],
-        ["3.8", "Total Investment in R&D as % of Total Revenue", "Total Investment in R&D / Total Revenue"],
-      ],
-    },
-    {
-      heading: "4. Market Presence and Growth",
-      rows: [
-        ["4.1", "Number of Customers", "Absolute Value"],
-        ["4.2", "Growth in Number of Customers", "((Current yr – Previous yr)/ Previous yr) X 100"],
-        ["4.3", "% of Total Revenue earned through Digital Technology", "Revenue Earned from Digital Technology Services / Total Revenue of the Company"],
-      ],
-    },
-  ];
-
   return (
     <div className="guideline-container">
       <h2 className="guideline-heading">Evaluation Guidelines – Digital Technology Provider of the Year</h2>
-      <br></br>
-      <p><strong>Objective:</strong> The award recognizes the leadership in performance of a company in implementing the most cutting-edge digital technologies in Oil & Gas sector.</p>
-      <br></br>
-      <p><strong>Eligibility Criteria:</strong> The award is open to any company in India, implementing digital technologies in Oil & Gas sector.</p>
+      <br />
+      <p>
+        <strong>Objective:</strong> The award recognizes the leadership in performance of a company in implementing the most cutting-edge digital technologies in Oil & Gas sector.
+      </p>
+      <br />
+      <p>
+        <strong>Eligibility Criteria:</strong><ul><li> The award is open to any company in India, implementing digital technologies in Oil & Gas sector.</li>
+          <li>Only 1 nomination from an organization duly endorsed by concerned Director / Board Level Executive would be considered.</li></ul>
+      </p>
+      
 
-      {sections.map((section, idx) => (
-        <div key={idx} className="guideline-section">
-          <h3>{section.heading}</h3>
-          <table className="guideline-table">
-            <thead>
+      {/* <p>
+        <strong>Key Formulas Used & Their Descriptions:</strong> The following performance parameters are evaluated quantitatively. Formulas implied or used across sheets as follows in seriatim:
+      </p> */}
+
+      <table className="guideline-table">
+        <thead>
+          <tr>
+            <th>S.No</th>
+            <th>Parameter</th>
+            <th>Description/Formula </th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>1</td>
+            <td>Revenue Earned from Digital Technology Services (INR Crore)</td>
+            <td>
+              Annual Revenue as earned from Digital Technology Services during the assessment year and as may be declared in the Annual Report of the Company
+              <br />
+              <br />
+              Based on the above values,<strong> growth in revenue earned from digital technology services</strong> is derived using the formula: [(Current year – Previous year) / Previous year] × 100
+            </td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td>Total Revenue of the Company (INR Crore)</td>
+            <td>Total revenue generated by a company from its business activities during a specific period</td>
+          </tr>
+
+          {/* Section 2: Digital Technology Proliferation */}
+          <tr>
+            <td><strong>3</strong></td>
+            <td colSpan="2"><strong>Digital Technology Implemented (Mention Top 3 Technologies Only)</strong></td>
+
+          </tr>
+          <tr>
+            <td>3.1</td>
+            <td><strong>Name of Digital Technology Project - (A)</strong></td>
+            <td>Digital Technology Project Name – (A)</td>
+          </tr>
+          <tr>
+            <td>3.1.1</td>
+            <td>Areas of Implementation</td>
+            <td>Specific Areas</td>
+          </tr>
+          <tr>
+            <td>3.1.2</td>
+            <td>Year of Commencement of Implementation</td>
+            <td>The initial 
+year in which the digital technology was first implemented. </td>
+          </tr>
+          <tr>
+            <td>3.1.3</td>
+            <td>No. of Customers as on date</td>
+            <td>
+              No. of customers (companies) using the particular technology in the
+              assessment year
+            </td>
+          </tr>
+          <tr>
+            <td>3.1.4</td>
+            <td>Revenue till date (INR Crore)</td>
+            <td>
+              Revenue earned through this particular technology till 31st March
+              of the assessment year
+            </td>
+          </tr>
+          <tr>
+            <td>3.1.5</td>
+            <td>Intangible Value Provided to Customers in areas of implementation</td>
+            <td>Non-material advantages that customers gain when a company implements a particular technology
+            </td>
+          </tr>
+
+          {/* Section 3: Upcoming / R&D on Digital Technology */}
+          <tr>
+            <td>3.2</td>
+            <td><strong>Name of Digital Technology Project – (B)</strong></td>
+            <td>Name of Digital Technology Project – (B)</td>
+          </tr>
+          <tr>
+            <td>3.2.1</td>
+            <td>Areas of Implementation</td>
+            <td>Specific Areas</td>
+          </tr>
+          <tr>
+            <td>3.2.2</td>
+            <td>Year of Commencement of Implementation</td>
+            <td>The initial 
+year in which the digital technology was first implemented. </td>
+            </tr>
               <tr>
-                <th>S.No</th>
-                <th>Parameter</th>
-                <th>Formula</th>
+                <td>3.2.3</td>
+                <td>Year of Commencement of Implementation</td>
+                <td>No. of customers (companies) using the particular technology in the assessment year</td>
               </tr>
-            </thead>
-            <tbody>
-              {section.rows.map((row, i) => (
-                <tr key={`${idx}-${i}`}>
-                  <td>{row[0]}</td>
-                  <td>{row[1]}</td>
-                  <td>{row[2]}</td>
-                </tr>
-              ))}
+              <tr>
+                <td>3.2.4</td>
+                <td>
+                  Total Revenue till date (INR Crore)</td>
+                <td>Revenue earned through this particular technology till 31st March of the assessment year</td>
+              </tr>
+              <tr>
+                <td>3.2.5</td>
+                <td>Intangible Value Provided to Customers in areas of implementation</td>
+                <td>Non-material advantages that customers gain when a company implements a particular technology</td>
+              </tr>
+              <tr>
+
+                <td>3.3</td>
+                <td><strong>Name of Digital Technology Project – (C)</strong></td>
+                <td>Name of Digital Technology Project – (C)</td>
+              </tr>
+              <tr>
+                <td>3.3.1</td>
+                <td>Areas of Implementation</td>
+                <td>Specific Areas</td>
+              </tr>
+              <tr>
+                <td>3.3.2</td>
+                <td>Year of Commencement of Implementation</td>
+                <td>The initial 
+year in which the digital technology was first implemented. </td>
+              </tr>
+
+              {/* Section 4: Market Presence and Growth */}
+              <tr>
+                <td>3.3.3</td>
+                <td>No. of Customers as on date</td>
+                <td>No. of customers (companies) using the particular technology in the assessment year</td>
+              </tr>
+              <tr>
+                <td>3.3.4</td>
+                <td>Total Revenue till date (INR Crore)</td>
+                <td>Revenue earned through this particular technology till 31st March of the assessment year</td>
+              </tr>
+              <tr>
+                <td>3.3.5</td>
+                <td>Intangible Value Provided to Customers in areas of implementation</td>
+                <td>Non-material advantages that customers gain when a company implements a particular technology</td>
+              </tr>
+              <tr>
+                <td colSpan="2"></td>
+                <td>Based on the above values, <strong>Digital Technologies Implementation Index</strong> is derived using the formula: [(Sum of (No. of customers*completed years))/3]
+                  <br />
+                  <br />
+                  <strong>Note: Completed Years to be calculated: (2025-Year of Implementation)</strong>
+                </td>
+
+              </tr>
+              <tr>
+                <td colSpan="2"></td>
+                <td>Further, total revenue till date (INR Crores) is calculated using the formula: Sum of revenue earned through technologies (A, B & C)    </td>
+              </tr>
+              <tr>
+                <td><strong>4</strong></td>
+                <td colSpan="2"><strong>Upcoming / R&D on Digital Technology (Mention Top 3 Technologies Only)</strong></td>
+              </tr>
+              <tr>
+                <td>4.1</td>
+                <td><strong>Name of Technology – (A)</strong></td>
+                <td>Name of the upcoming digital technology – (A)</td>
+              </tr>
+              <tr>
+                <td>4.1.1</td>
+                <td>Year of Commencement of R&D</td>
+                <td>Specific year on which the approval was obtained </td>
+              </tr>
+              <tr>
+                <td>4.1.2</td>
+                <td>Investment (INR Crore)</td>
+                <td>Total investment as envisaged in the approving document  </td>
+              </tr>
+              <tr>
+                <td>4.1.3</td>
+                <td>Patents Obtained</td>
+                <td>Total number of patents obtained against the said technology</td>
+              </tr>
+              <tr>
+                <td>4.1.4</td>
+                <td>The intangible areas where the R&D initiative is expected to add value*</td>
+                <td><strong>Please refer to the note below</strong></td>
+              </tr>
+              <tr>
+                <td>4.2</td>
+                <td><strong>Name of Technology – (B)</strong></td>
+                <td>Name of the upcoming digital technology – (B)</td>
+              </tr>
+              <tr>
+                <td>4.2.1</td>
+                <td>Year of Commencement of R&D </td>
+                <td>Specific year on which the approval was obtained </td>
+              </tr>
+              <tr>
+                <td>4.2.2</td>
+                <td>Investment (INR Crore)</td>
+                <td>Total investment as envisaged in the approving document  </td>
+              </tr>
+              <tr>
+                <td>4.2.3</td>
+                <td>Patents Obtained</td>
+                <td>Total number of patents obtained against the said technology</td>
+              </tr>
+              <tr>
+                <td>4.2.4</td>
+                <td>The intangible areas where the R&D initiative is expected to add value*</td>
+                <td><strong>Please refer to the note below</strong></td>
+              </tr>
+
+
+              <tr>
+                <td>4.3</td>
+                <td><strong>Name of Technology – (C)</strong></td>
+                <td>Name of the upcoming digital technology – (C)</td>
+              </tr>
+              <tr>
+                <td>4.3.1</td>
+                <td>Year of Commencement of R&D </td>
+                <td>Specific year on which the approval was obtained </td>
+              </tr>
+              <tr>
+                <td>4.3.2</td>
+                <td>Investment (INR Crore)</td>
+                <td>Total investment as envisaged in the approving document  </td>
+              </tr>
+              <tr>
+                <td>4.3.3</td>
+                <td>Patents Obtained</td>
+                <td>Total number of patents obtained against the said technology</td>
+              </tr>
+              <tr>
+                <td>4.3.4</td>
+                <td>The intangible areas where the R&D initiative is expected to add value*</td>
+                <td><strong>Please refer to the note below</strong></td>
+              </tr>
+              <tr>
+                <td colSpan="2"></td>
+                <td>Based on above points, <strong>Total Investment</strong> is derived using the formula: [Sum of investment in all 3 technologies (INR Crore)]</td>
+
+              </tr>
+              <tr>
+                <td colSpan="2"></td>
+                <td>Further, <strong>Total Number of Patents</strong> obtained is calculated using the formula: [Sum of patents obtained in all 3 technologies (Nos.)</td>
+
+              </tr>
+              <tr>
+                <td>4.4</td>
+                <td>Total Investment in R&D in 2024-25 (INR Crore)</td>
+                <td>Total Investment in R&D in 2024-25 (INR Crore)
+                  <br />
+                  <br />
+                  Based on the above value,/,<strong> Total Investment in R&D as % of Total Revenue</strong> is derived using the formula: [Total Investment in R&D in 2024-25 / Total Revenue of the Company
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Number of Customers</td>
+                <td>Absolute Value
+                  <br />
+                  <br />
+                  Based on the above values, growth in number of customers is calculated using the formula: [(Current yr – Previous yr)/ Previous yr] X 100
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>% of Total Revenue earned through Digital Technology Services (in 2024-25)</td>
+                <td>Means the share of a company’s revenue that comes specifically from products, services, or solutions based on digital technologies</td>
+              </tr>
+
             </tbody>
           </table>
-        </div>
-      ))}
 
-      <div className="guideline-notes">
-        <h4>Notes:</h4>
+
+             
+
+<p className="notes">
+        <strong>Notes:</strong><br />
+        <br/>
+         <strong>Areas of Intangible Value:</strong>
+         
+            
+            <ol type="1">
+              <li>Reduction Carbon Footprint</li>
+              <li>Improvement in Productivity</li>
+              <li>Improvement in Energy Efficiency</li>
+              <li>Reduction in Usage of Paper</li>
+              <li>Expediting procurement/sales invoicing process</li>
+              <li>Improvement in HSE Performance</li>
+              <li>Improvement in Customer Interfacing</li>
+              <li>Others</li>
+            </ol>
+
+      </p>
+
+
+          </div>
         
-        <h4><strong>Areas of Intangible Value:</strong></h4>
-        
-          <ol type="1">
-          <li> Reduction Carbon Footprint</li>
-          <li> Improvement in Productivity</li>
-          <li> Improvement in Energy Efficiency</li>
-          <li> Reduction in Usage of Paper</li>
-          <li> Expediting procurement/sales invoicing process</li>
-          <li> Improvement in HSE Performance</li>
-          <li> Improvement in Customer Interfacing</li>
-          <li> Others</li>
-          </ol>
-        
-      </div>
-    </div>
-  );
+        );
 };
 
-export default GuidelineDigital;
+        export default GuidelineDigital;

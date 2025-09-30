@@ -1,23 +1,94 @@
+/* General Container */
 .call-center-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 24px 28px;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.tab-btn {
+  padding: 10px 15px;
+  border: none;
+  background: none;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+  min-height: 44px;
+  border-radius: 4px 4px 0 0;
+}
+
+.tab-btn:hover {
+  color: #4f6ec7;
+  border-bottom-color: #4f6ec7;
+}
+
+.tab-btn.active {
+  color: #1a3c6e;
+  border-bottom-color: #1a3c6e;
+}
+
+.tab-btn:focus {
+  outline: none;
+}
+
+.tab-btn:focus-visible {
+  outline: 2px solid #1a3c6e;
+  outline-offset: 2px;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  background-color: #fff;
+  border-radius: 0 6px 6px 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.page-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: #1a3c6e;
-  margin-bottom: 24px;
+/* Sections */
+.section {
+  padding: 0; /* No additional padding within sections to avoid nesting issues */
 }
 
+.section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #c65100;
+  margin-bottom: 15px;
+}
+
+.section p {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.section support-section{
+        max-width: 1400px;
+        padding: 30px;
+}
+/* Alert */
 .alert {
-  padding: 12px 16px;
-  margin-bottom: 24px;
-  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
   font-weight: 500;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 .alert-success {
@@ -26,143 +97,49 @@
   border: 1px solid #bbf7d0;
 }
 
-.tabs {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 24px;
-  overflow-x: auto;
-  padding: 0 16px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.tab-btn {
-  padding: 12px 20px;
-  border: none;
-  background: none;
-  font-weight: 500;
-  color: #6b7280;
-  cursor: pointer;
-  font-size: 14px;
-  white-space: nowrap;
-  border-bottom: 2px solid transparent;
-  transition: all 0.2s ease;
-}
-
-.tab-btn:hover {
-  color: #374151;
-  border-bottom-color: #d1d5db;
-}
-
-.tab-btn.active {
-  color: #256ebd;
-  border-bottom-color: #256ebd;
-}
-
-.tab-btn.active,
-.tab-btn:focus {
-  outline: none;
-}
-
-.tab-btn:focus-visible {
-  outline: 2px solid #256ebd;
-  outline-offset: 2px;
-}
-
-.tab-btn:focus-visible:not(:focus-visible) {
-  outline: none;
-}
-
-.tab-btn:last-child {
-  margin-right: 0;
-}
-
-.tab-btn:first-child {
-  margin-left: 0;
-}
-
-.tab-btn + .tab-btn {
-  margin-left: 0;
-}
-
-.tab-btn {
-  border-radius: 4px 4px 0 0;
-}
-
-.tab-content {
-  background: white;
-  border-radius: 0 8px 8px 8px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
-  border: 1px solid #e2e8f0;
-  padding: 24px;
-  box-sizing: border-box;
-}
-
-.support-ticket {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.support-ticket h3,
-.support-team h3,
-.faq-section h3 {
-  font-weight: 600;
-  color: #1a365d;
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-.support-ticket p,
-.support-team p,
-.faq-section p {
-  color: #718096;
-  font-size: 16px;
-  margin-bottom: 16px;
-}
-
+/* Ticket Form */
 .ticket-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .form-group label {
   display: block;
   font-weight: 600;
   margin-bottom: 8px;
-  color: #2d3748;
+  color: #1a3c6e;
 }
 
 .form-control {
   width: 100%;
-  padding: 12px;
-  font-size: 15px;
+  padding: 10px;
+  font-size: 14px;
   border-radius: 6px;
-  border: 1px solid #cbd5e0;
+  border: 1px solid #e0e0e0;
   box-sizing: border-box;
   transition: border-color 0.2s ease-in-out;
 }
 
 .form-control:focus {
   outline: none;
-  border-color: #256ebd;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+  border-color: #4f6ec7;
+  box-shadow: 0 0 0 3px rgba(79, 110, 199, 0.3);
 }
 
 textarea.form-control {
   resize: vertical;
-  min-height: 100px;
+  min-height: 80px;
 }
 
 .form-row {
   display: flex;
-  gap: 16px;
   flex-wrap: wrap;
-  box-sizing: border-box;
+  gap: 15px;
 }
 
 .form-row .form-group {
@@ -170,87 +147,87 @@ textarea.form-control {
   min-width: 0;
 }
 
+/* Buttons */
 .btn {
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: 500;
   cursor: pointer;
   border: none;
-  background-color: #256ebd;
-  color: white;
-  box-sizing: border-box;
+  background-color: #1a3c6e;
+  color: #ffffff;
   transition: background-color 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px;
 }
 
 .btn:hover,
 .btn:focus {
-  background-color: #1b4fa7;
+  background-color: #4f6ec7;
   outline: none;
 }
 
+/* Team Grid */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 24px;
-  margin-top: 16px;
-  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .team-card {
   background-color: #f7fafc;
-  border-radius: 12px;
-  padding: 16px;
-  box-sizing: border-box;
-  display: flex;
+  border-radius: 6px;
+  padding: 15px;
+  display:-webkit-inline-box;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
 .team-avatar {
-  width: 50px;
-  height: 50px;
-  background-color: #256ebd;
-  color: white;
+  width: 40px;
+  height: 40px;
+  background-color: #1a3c6e;
+  color: #ffffff;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 18px;
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .team-name {
   font-weight: 600;
-  font-size: 16px;
-  color: #2d3748;
+  font-size: 14px;
+  color: #1a3c6e;
   margin-bottom: 8px;
 }
 
 .team-role {
-  font-size: 14px;
-  color: #4a5568;
-  margin-bottom: 12px;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 10px;
 }
 
 .team-contact {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contact-item {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 14px;
-  color: #4a5568;
+  font-size: 13px;
+  color: #374151;
 }
 
 .contact-item span,
@@ -259,198 +236,404 @@ textarea.form-control {
 }
 
 .contact-item a {
-  color: #256ebd;
+  color: #4f6ec7;
   text-decoration: none;
 }
 
 .contact-item a:hover {
   text-decoration: underline;
-}
-
-.emergency-support {
-  margin-top: 32px;
-  color: #e53e3e;
-  font-weight: 600;
+  color: #1a3c6e;
 }
 
 /* FAQ Section */
-
-.faq-section {
-  margin-top: 32px;
-}
-
-.faq-section h3 {
-  font-weight: 600;
-  font-size: 20px;
-  color: #2a4365;
-}
-
 .faq-list {
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
 .faq-item {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .faq-question {
   font-weight: 600;
-  font-size: 16px;
-  color: #2a4365;
+  font-size: 15px;
+  color: #1a3c6e;
   margin-bottom: 6px;
 }
 
 .faq-answer {
-  font-size: 15px;
-  color: #4a5568;
+  font-size: 14px;
+  color: #374151;
   line-height: 1.5;
 }
 
 .faq-footer {
-  margin-top: 24px;
+  margin-top: 20px;
   text-align: center;
 }
 
-/* ====== Responsive Media Queries ====== */
-
-@media (min-width: 1440px) {
+/* Responsive Adjustments */
+@media (max-width: 576px) {
   .call-center-container {
-    max-width: 1200px;
-    padding: 32px 40px;
+    padding: 10px;
   }
 
-  .page-title {
-    font-size: 36px;
+  .tabs {
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .tab-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .content-wrapper {
+    padding: 10px;
+  }
+
+  .section h3 {
+    font-size: 16px;
+  }
+
+  .section p {
+    font-size: 12px;
+  }
+
+  .alert {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  .form-control {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 8px 15px;
   }
 
   .team-grid {
-    gap: 28px;
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 10px;
+  }
+
+  .team-avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .team-name {
+    font-size: 12px;
+  }
+
+  .team-role,
+  .contact-item {
+    font-size: 11px;
+  }
+
+  .faq-question {
+    font-size: 13px;
+  }
+
+  .faq-answer {
+    font-size: 12px;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1439px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .call-center-container {
-    max-width: 1000px;
-    padding: 28px 32px;
+    padding: 15px;
   }
 
-  .page-title {
-    font-size: 34px;
+  .tabs {
+    gap: 8px;
+    margin-bottom: 15px;
   }
 
-  .team-grid {
-    gap: 26px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .call-center-container {
-    max-width: 720px;
-    padding: 24px 28px;
+  .tab-btn {
+    font-size: 13px;
+    padding: 9px 12px;
   }
 
-  .page-title {
-    font-size: 28px;
+  .content-wrapper {
+    padding: 15px;
+  }
+
+  .section h3 {
+    font-size: 17px;
+  }
+
+  .section p {
+    font-size: 13px;
+  }
+
+  .alert {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  .form-control {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 9px 18px;
   }
 
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
   }
 
-  .form-row {
-    flex-direction: column;
-    gap: 18px;
+  .team-card {
+    padding: 12px;
+  }
+
+  .team-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .team-name {
+    font-size: 13px;
+  }
+
+  .team-role,
+  .contact-item {
+    font-size: 12px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-answer {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .call-center-container {
+    padding: 20px;
+  }
+
+  .tabs {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .content-wrapper {
+    padding: 20px;
+  }
+
+  .section h3 {
+    font-size: 18px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+
+  .alert {
+    padding: 10px 15px;
+    font-size: 14px;
   }
 
   .form-control {
-    font-size: 16px;
-    padding: 16px;
+    font-size: 14px;
+    padding: 10px;
   }
 
   .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-card {
+    padding: 15px;
+  }
+
+  .team-avatar {
+    width: 40px;
+    height: 40px;
     font-size: 18px;
-    padding: 14px 26px;
-    width: 100%;
+  }
+
+  .team-name {
+    font-size: 14px;
+  }
+
+  .team-role,
+  .contact-item {
+    font-size: 13px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
   }
 }
 
-@media (min-width: 600px) and (max-width: 767px) {
+@media (min-width: 1025px) and (max-width: 1440px) {
   .call-center-container {
-    max-width: 560px;
-    padding: 20px 24px;
+    padding: 25px;
   }
 
-  .page-title {
-    font-size: 26px;
+  .tabs {
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+    padding: 11px 17px;
+  }
+
+  .content-wrapper {
+    padding: 25px;
+  }
+
+  .section h3 {
+    font-size: 20px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+
+  .alert {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 11px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 11px 22px;
   }
 
   .team-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .team-card {
+    padding: 20px;
+  }
+
+  .team-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  .team-name {
+    font-size: 14px;
+  }
+
+  .team-role,
+  .contact-item {
+    font-size: 13px;
+  }
+
+  .faq-question {
+    font-size: 15px;
+  }
+
+  .faq-answer {
+    font-size: 14px;
   }
 }
 
-@media (min-width: 480px) and (max-width: 599px) {
+@media (min-width: 1441px) {
   .call-center-container {
-    max-width: 440px;
-    padding: 18px 20px;
+    max-width: 1400px;
+    padding: 30px;
   }
 
-  .page-title {
-    font-size: 24px;
+  .tabs {
+    gap: 15px;
+    margin-bottom: 30px;
   }
 
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  .tab-btn {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
+
+  .content-wrapper {
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+
+  .section h3 {
+    font-size: 22px;
+  }
+
+  .section p {
+    font-size: 16px;
+  }
+
+  .alert {
+    padding: 15px 20px;
+    font-size: 16px;
   }
 
   .form-control {
     font-size: 15px;
-    padding: 14px;
-  }
-
-  .btn {
-    font-size: 16px;
-    padding: 12px 22px;
-  }
-}
-
-@media (max-width: 479px) {
-  .call-center-container {
-    max-width: 100%;
-    padding: 16px 18px;
-  }
-
-  .page-title {
-    font-size: 22px;
-  }
-
-  .tab-btn {
-    padding: 10px 14px;
-    font-size: 14px;
-  }
-
-  .form-row {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .team-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .form-control {
-    font-size: 14px;
     padding: 12px;
   }
 
   .btn {
+    font-size: 15px;
+    padding: 12px 25px;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .team-card {
+    padding: 25px;
+  }
+
+  .team-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .team-name {
+    font-size: 15px;
+  }
+
+  .team-role,
+  .contact-item {
     font-size: 14px;
-    padding: 12px 20px;
-    width: 100%;
   }
 
   .faq-question {
@@ -458,14 +641,12 @@ textarea.form-control {
   }
 
   .faq-answer {
-    font-size: 14px;
-  }
-
-  .team-name {
     font-size: 15px;
   }
-
-  .team-role {
-    font-size: 13px;
-  }
+}
+@media (min-width: 1441px) {
+    .section support-section {
+        max-width: 1400px;
+        padding: 30px;
+    }
 }
